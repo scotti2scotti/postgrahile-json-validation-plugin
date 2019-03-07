@@ -1,7 +1,8 @@
 {
-  "name": "postgrahile-json-validation-plugin",
+  "name": "postgraphile-json-validation-plugin",
   "version": "0.0.1",
   "description": "PostGraphile JSON Validation Plugin",
+  "license": "MIT",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
@@ -17,7 +18,24 @@
     "test:watch": "run-s docker:up docker:start docker:watch docker:down"
   },
   "author": "Alessandro Scotti <alex@scotti2scotti.com>",
-  "license": "MIT",
+  "keywords": [
+    "json",
+    "jsonb",
+    "graphql",
+    "engine",
+    "pg",
+    "postgres",
+    "postgresql",
+    "postgraphql",
+    "schema",
+    "reflection",
+    "introspection",
+    "postggraphile"
+  ],
+  "bugs": {
+    "url": "https://github.com/scotti2scotti/postgrahile-json-validation-plugin/issues"
+  },
+  "repository": "github:scotti2scotti/postgrahile-json-validation-plugin",
   "devDependencies": {
     "@types/express": "^4.16.1",
     "@types/jest": "^24.0.9",

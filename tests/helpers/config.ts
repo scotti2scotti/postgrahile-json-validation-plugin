@@ -14,12 +14,12 @@ const metaSchema = {
 const dbSchema = 'plugin'
 
 const sql = `
-DROP SCHEMA IF EXISTS t CASCADE;
-CREATE SCHEMA ${dbSchema};
-CREATE TABLE ${dbSchema}.document (
-  id SERIAL PRIMARY KEY,
-  meta JSONB NOT NULL
-);
+  DROP SCHEMA IF EXISTS ${dbSchema} CASCADE;
+  CREATE SCHEMA ${dbSchema};
+  CREATE TABLE ${dbSchema}.document (
+    id SERIAL PRIMARY KEY,
+    meta JSONB NOT NULL
+  );
 `
 
 const poolOptions: PoolConfig = {
@@ -40,13 +40,13 @@ class Config {
     return postgraphile(this.pool, dbSchema, {
       appendPlugins: [plugin],
       dynamicJson: true,
-      graphiql: true,
+      graphiql: false,
       disableQueryLog: true,
     })
   }
 
   private readonly setUpPool = async () => {
-    if (this.pool) {
+    if (!!this.pool) {
       return
     }
     this.pool = new Pool(poolOptions)
