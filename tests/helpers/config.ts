@@ -1,5 +1,5 @@
 import { Pool, PoolConfig } from 'pg'
-import { postgraphile } from 'postgraphile'
+import { postgraphile, HttpRequestHandler } from 'postgraphile'
 import { JsonValidationPlugin, Validation } from '../../src/index'
 
 const metaSchema = {
@@ -32,7 +32,7 @@ const poolOptions: PoolConfig = {
 class Config {
   private pool: Pool
 
-  public readonly postgraphile = async () => {
+  public readonly postgraphile = async (): Promise<HttpRequestHandler> => {
     await this.setUpPool()
     const validation = new Validation()
     const validate = validation.addSchema('document', 'meta', metaSchema)
