@@ -1,0 +1,16 @@
+{
+  "folders": [
+    {
+      "name": "PostGraphile JSON Validation Plugin",
+      "path": "."
+    }
+  ],
+  "settings": {
+    "editor.tabSize": 2,
+    "editor.formatOnSave": true,
+    "prettier.tslintIntegration": true,
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+    "terminal.integrated.showExitAlert": false
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "extends": ["tslint:latest", "tslint-config-prettier"],
+  "rulesDirectory": ["node_modules/tslint-lines-between-class-members"],
+  "rules": {
+    "lines-between-class-members": [true, 1],
+    "interface-name": [true, "never-prefix"],
+    "object-literal-sort-keys": false,
+    "no-console": false
+  }
+}

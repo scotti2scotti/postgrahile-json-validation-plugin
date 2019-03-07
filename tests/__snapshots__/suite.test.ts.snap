@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`JsonValidationPlugin CreateMultipleInvalid 1`] = `
+Object {
+  "data": Object {
+    "createDocument": null,
+  },
+  "errors": Array [
+    Object {
+      "locations": Array [
+        Object {
+          "column": 3,
+          "line": 3,
+        },
+      ],
+      "message": "foo should be integer, bar should be string",
+      "path": Array [
+        "createDocument",
+      ],
+    },
+  ],
+}
+`;
+
+exports[`JsonValidationPlugin CreateSingleInvalid 1`] = `
+Object {
+  "data": Object {
+    "createDocument": null,
+  },
+  "errors": Array [
+    Object {
+      "locations": Array [
+        Object {
+          "column": 3,
+          "line": 3,
+        },
+      ],
+      "message": "bar should be string",
+      "path": Array [
+        "createDocument",
+      ],
+    },
+  ],
+}
+`;
+
+exports[`JsonValidationPlugin CreateValid 1`] = `
+Object {
+  "data": Object {
+    "createDocument": Object {
+      "document": Object {
+        "id": 1,
+        "meta": Object {
+          "bar": "1",
+          "foo": 1,
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`JsonValidationPlugin UpdateInvalid 1`] = `
+Object {
+  "data": Object {
+    "updateDocumentById": null,
+  },
+  "errors": Array [
+    Object {
+      "locations": Array [
+        Object {
+          "column": 3,
+          "line": 3,
+        },
+      ],
+      "message": "foo should be integer, bar should be string",
+      "path": Array [
+        "updateDocumentById",
+      ],
+    },
+  ],
+}
+`;
+
+exports[`JsonValidationPlugin UpdateValid 1`] = `
+Object {
+  "data": Object {
+    "updateDocumentById": Object {
+      "document": Object {
+        "id": 1,
+        "meta": Object {
+          "bar": "2",
+          "foo": 1,
+        },
+      },
+    },
+  },
+}
+`;

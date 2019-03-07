@@ -1,0 +1,22 @@
+version: '3'
+services:
+  runner:
+    image: node:lts-alpine
+    container_name: runner
+    volumes:
+      - ../../:/plugin:rw
+    depends_on: [db]
+    networks:
+      - pgjvp
+    working_dir: /plugin
+    command: sleep 12h
+  db:
+    image: postgres:9.6-alpine
+    container_name: db
+    environment:
+      POSTGRES_USER: plugin
+      POSTGRES_PASSWORD: ''
+    networks:
+      - pgjvp
+networks:
+  pgjvp:
