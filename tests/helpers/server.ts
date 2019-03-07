@@ -8,13 +8,13 @@ let server: Server | null = null
 
 const running = () => !!server
 
-export const start = async () => {
+export const start = async (dynamicJson: boolean = true) => {
   if (running()) {
     return
   }
   try {
     const app = express()
-    app.use(await config.postgraphile())
+    app.use(await config.postgraphile(dynamicJson))
     server = app.listen(port)
   } catch (e) {
     console.log(e)

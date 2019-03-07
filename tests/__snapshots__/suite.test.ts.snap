@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`JsonValidationPlugin CreateMultipleInvalid 1`] = `
+exports[`With dynamicJson CreateMultipleInvalid 1`] = `
 Object {
   "data": Object {
     "createDocument": null,
@@ -22,7 +22,7 @@ Object {
 }
 `;
 
-exports[`JsonValidationPlugin CreateSingleInvalid 1`] = `
+exports[`With dynamicJson CreateSingleInvalid 1`] = `
 Object {
   "data": Object {
     "createDocument": null,
@@ -44,7 +44,7 @@ Object {
 }
 `;
 
-exports[`JsonValidationPlugin CreateValid 1`] = `
+exports[`With dynamicJson CreateValid 1`] = `
 Object {
   "data": Object {
     "createDocument": Object {
@@ -60,7 +60,7 @@ Object {
 }
 `;
 
-exports[`JsonValidationPlugin UpdateInvalid 1`] = `
+exports[`With dynamicJson UpdateInvalid 1`] = `
 Object {
   "data": Object {
     "updateDocumentById": null,
@@ -82,7 +82,7 @@ Object {
 }
 `;
 
-exports[`JsonValidationPlugin UpdateValid 1`] = `
+exports[`With dynamicJson UpdateValid 1`] = `
 Object {
   "data": Object {
     "updateDocumentById": Object {

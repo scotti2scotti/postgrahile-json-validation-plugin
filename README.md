@@ -25,11 +25,13 @@ CREATE TABLE public.document (
 and this schema:
 
 ```javascript
-$id: 'http://example.s2s.com/foobar',
-type: 'object',
-properties: {
-  foo: { type: 'integer' },
-  bar: { type: 'string' },
+{
+  $id: 'http://example.s2s.com/foobar',
+  type: 'object',
+  properties: {
+    foo: { type: 'integer' },
+    bar: { type: 'string' },
+  }
 }
 ```
 
